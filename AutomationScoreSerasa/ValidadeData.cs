@@ -8,11 +8,32 @@ namespace AutomationScoreSerasa
 {
     public class ValidadeData
     {
-        public bool ValidateCPF(string CPF) 
+        public bool ValiadePassword(string password) 
         {
-            bool controle = false;
+            bool control = false;
 
-            while (!controle)
+            while (!control) 
+            {
+                if (String.IsNullOrEmpty(password))
+                {
+                    Console.WriteLine("Password is null or empty");
+
+                    Console.WriteLine("Enter your password:");
+                    password = Console.ReadLine();
+
+                    continue;
+                }
+                else control = true;
+            }
+
+            return control;
+        }
+
+        public bool ValidateCPF(string CPF)
+        {
+            bool control = false;
+
+            while (!control)
             {
                 if (String.IsNullOrEmpty(CPF) || (CPF.Length != 11))
                 {
@@ -23,11 +44,10 @@ namespace AutomationScoreSerasa
 
                     continue;
                 }
-                else
-                    controle = true;
+                else control = true;
             }
 
-            return controle;
+            return control;
         }
     }
 }
