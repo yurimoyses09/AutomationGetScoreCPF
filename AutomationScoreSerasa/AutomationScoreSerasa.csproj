@@ -49,9 +49,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Control.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\ValidadeData.cs" />
+    <Compile Include="Interfaces\IValidate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidadeData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
